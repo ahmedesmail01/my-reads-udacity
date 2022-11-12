@@ -3,6 +3,7 @@ import * as API from "../BooksAPI";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import SingleBook from "./SingleBook";
+import DebounceInput from "react-debounce-input";
 
 //this is the search page component
 function SearchPage({ allBooks, changeShelf }) {
@@ -11,7 +12,7 @@ function SearchPage({ allBooks, changeShelf }) {
   /* and then i send it to the search method in the api */
   const searchResults = (e) => {
     const query = e.target.value;
-    if (!query) {
+    if (query.length === 0) {
       setSearch([]);
       return;
     }
@@ -40,11 +41,19 @@ function SearchPage({ allBooks, changeShelf }) {
             Close
           </Link>
           <div className="search-books-input-wrapper">
-            <input
+            <DebounceInput
+              minLength={3}
+              debounceTimeout={200}
+              element="input"
+              type="text"
+              placeholder="Search by title or author"
+              onChange={searchResults}
+            />
+            {/* <input
               type="text"
               placeholder="Search by title, author, or ISBN"
               onChange={searchResults}
-            />
+            /> */}
           </div>
         </div>
         <div className="search-books-results">

@@ -13,7 +13,7 @@ To start the project you should:
 
 - install all project dependencies with `npm install`
 - start the development server with `npm start`
-- open browser in http://localhost:3000 to see the app.
+- open browser in http://localhost:3000/my-reads-udacity to see the app.
 
 ## What You're Getting
 
