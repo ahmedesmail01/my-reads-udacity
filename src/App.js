@@ -31,7 +31,7 @@ function App() {
     <>
       <Routes>
         <Route
-          path="/"
+          path="/my-reads-udacity"
           element={
             <>
               <Header />
@@ -49,7 +49,7 @@ function App() {
           }
         />
         <Route
-          path="/search"
+          path="/my-reads-udacity/search"
           element={
             <>
               <SearchPage allBooks={allBooks} changeShelf={changeShelf} />
@@ -57,7 +57,7 @@ function App() {
           }
         />
         <Route
-          path="book/:bookId"
+          path="/my-reads-udacity/book/:bookId"
           element={
             <>
               <Header />

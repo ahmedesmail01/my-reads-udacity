@@ -22,7 +22,7 @@ function SingleBook({ book, changeShelf }) {
       <li key={book.id}>
         <div className="book">
           <div className="book-top">
-            <Link to={`/book/${book.id}`}>
+            <Link to={`/my-reads-udacity/book/${book.id}`}>
               <div
                 className="book-cover"
                 style={{
