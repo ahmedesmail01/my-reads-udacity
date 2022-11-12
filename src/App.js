@@ -39,7 +39,7 @@ function App() {
                 <>
                   <Shelfs allBooks={allBooks} changeShelf={changeShelf} />
                   <div className="open-search">
-                    <Link to="/search">Add Book</Link>
+                    <Link to="/my-reads-udacity/search">Add Book</Link>
                   </div>
                 </>
               ) : (
